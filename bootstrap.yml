@@ -8,3 +8,6 @@ dots:
   - vimrc.local
   - vimrc.bundles.local
 
+ignore:
+  - bootstrap.yml
+  - README.md
