@@ -1,0 +1,19 @@
+{
+	"color_scheme": "Packages/User/SublimeLinter/Dracula (SL).tmTheme",
+	"font_face": "Monospace Bold",
+	"font_options":
+	[
+		"bold"
+	],
+	"font_size": 10,
+	"highlight_line": true,
+	"ignored_packages":
+	[
+		"Markdown",
+		"RestructuredText",
+		"vintage"
+	],
+	"spacegray_fileicons": true,
+	"theme": "Spacegray.sublime-theme",
+	"validate_imports": "true"
+}

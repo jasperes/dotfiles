@@ -1,0 +1,7 @@
+{
+    "editor.fontFamily": "Monospace",
+    "editor.fontSize": 12,
+    "editor.fontWeight": "bold",
+    "workbench.colorTheme": "Dracula",
+    "workbench.iconTheme": "vscode-great-icons"
+}

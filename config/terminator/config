@@ -1,0 +1,27 @@
+[global_config]
+  homogeneous_tabbar = False
+  scroll_tabbar = True
+  tab_position = hidden
+[keybindings]
+[layouts]
+  [[default]]
+    [[[child1]]]
+      parent = window0
+      profile = default
+      type = Terminal
+    [[[window0]]]
+      parent = ""
+      type = Window
+[plugins]
+[profiles]
+  [[default]]
+    background_color = "#282a36"
+    background_image = None
+    font = Monospace Bold 10
+    foreground_color = "#f8f8f2"
+    icon_bell = False
+    palette = "#000000:#ff5555:#50fa7b:#f1fa8c:#bd93f9:#ff79c6:#8be9fd:#bfbfbf:#4d4d4d:#ff6e67:#5af78e:#f4f99d:#caa9fa:#ff92d0:#9aedfe:#e6e6e6"
+    scrollback_infinite = True
+    scrollbar_position = hidden
+    show_titlebar = False
+    use_system_font = False

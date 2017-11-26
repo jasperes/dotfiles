@@ -1,0 +1,10 @@
+dots:
+  - gconf
+  - config
+  - local
+  - mpd
+  - ncmpcpp
+  - Xresources
+  - vimrc.local
+  - vimrc.bundles.local
+
