@@ -1,0 +1,50 @@
+" Install Plug, a plugin manager
+if empty(glob('~/.vim/autoload/plug.vim'))
+    silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+        \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+    autocmd VimEnter * Plugstall --sync | source $MYVIMRC
+endif
+
+call plug#begin('~/.vim/bundle')
+
+" General
+    Plug 'scrooloose/nerdtree'                          " File system explorer
+    Plug 'Xuyuanp/nerdtree-git-plugin'                  " NerdTree git extension
+    Plug 'ctrlpvim/ctrlp.vim'                           " File search tool
+    Plug 'tacahiroy/ctrlp-funky'                        " Upgrade for ctrlp tool
+    Plug 'editorconfig/editorconfig-vim'                " Editorconfig settings
+    Plug 'vim-syntastic/syntastic'                      " Syntax checking on save
+    Plug 'easymotion/vim-easymotion'                    " Search highlight
+    Plug 'tpope/vim-fugitive'                           " Git plugin
+    Plug 'tpope/vim-surround'                           " Change, delete and add words
+
+" Theme
+    Plug 'dracula/vim'                                  " Dracula theme
+    Plug 'vim-airline/vim-airline'                      " Statusline
+    Plug 'vim-airline/vim-airline-themes'               " Statusline themes
+
+" Autocomplete
+    Plug 'Valloric/YouCompleteMe'                       " Auto complete
+    Plug 'SirVer/ultisnips'                             " Snippets
+    Plug 'honza/vim-snippets'                           " Snippets files for various programming languages
+
+" Frontend
+    Plug 'pangloss/vim-javascript'                      " Javascript syntax
+    Plug 'briancollins/vim-jst'                         " JST syntax
+    Plug 'digitaltoad/vim-pug'                          " Pug syntax
+    Plug 'groenewege/vim-less'                          " LESS syntax
+    Plug 'elzr/vim-json'                                " JSON syntax
+    Plug 'kchmck/vim-coffee-script'                     " Coffee Script syntax
+    Plug 'leafgarland/typescript-vim'                   " Typescript syntax
+
+" Python
+    Plug 'python-mode/python-mode'                      " Python IDE
+
+" Ruby
+    Plug 'tpope/vim-rails'                              " Ruby IDE
+
+" Misc
+    Plug 'godlygeek/tabular'                            " Markdown requirement
+    Plug 'plasticboy/vim-markdown'                      " Markdown
+
+call plug#end()

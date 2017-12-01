@@ -1,0 +1,80 @@
+" Airline (Statusline)
+    let g:airline_theme='violet'
+
+" Ctrlp
+    let g:ctrlp_working_path_mode = 'ra'
+    let g:ctrlp_custom_ignore = {
+        \ 'dir':  '\.git$\|\.hg$\|\.svn$',
+        \ 'file': '\.exe$\|\.so$\|\.dll$\|\.pyc$' }
+    
+    " CtrlP extensions
+    let g:ctrlp_extensions = ['funky']
+
+" NERDTree
+    " Auto open NERDTree when no file especified
+    autocmd StdinReadPre * let s:std_in=1
+    autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+
+    " Enter on opened file
+    autocmd BufEnter * lcd %:p:h
+
+    " Close vim if only NERDTree is opened
+    " autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
+    let NERDTreeChDirMode=0                         " 
+    let NERDTreeQuitOnOpen=1                        "
+    let NERDTreeMouseMode=2                         "
+    let NERDTreeShowHidden=1                        "
+    let NERDTreeKeepTreeInNewTab=1                  "
+
+    " Keybind Ctrl+C
+    map <C-n> :NERDTreeToggle<CR>
+
+    " Update default arrows
+    let g:NERDTreeDirArrowExpandable = '▸'
+    let g:NERDTreeDirArrowCollapsible = '▾'
+
+    " NERDTree Git
+    let g:NERDTreeIndicatorMapCustom = {
+        \ "Modified"  : "✹",
+        \ "Staged"    : "✚",
+        \ "Untracked" : "✭",
+        \ "Renamed"   : "➜",
+        \ "Unmerged"  : "═",
+        \ "Deleted"   : "✖",
+        \ "Dirty"     : "✗",
+        \ "Clean"     : "✔︎",
+        \ 'Ignored'   : '☒',
+        \ "Unknown"   : "?"
+    \ }
+
+" Python
+    let g:pymode_lint_checkers = ['pyflakes']
+    let g:pymode_trim_whitespaces = 0
+    let g:pymode_options = 0
+    let g:pymode_rope = 0
+
+" Ruby
+    let g:rubycomplete_buffer_loading = 1
+    "let g:rubycomplete_classes_in_global = 1
+    "let g:rubycomplete_rails = 1
+
+" YouCompleteMe
+    let g:acp_enableAtStartup = 0
+
+    " enable completion from tags
+    let g:ycm_collect_identifiers_from_tags_files = 1
+
+    " Enable omni completion.
+    autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
+    autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
+    autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
+    autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
+    autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
+    autocmd FileType ruby setlocal omnifunc=rubycomplete#Complete
+    autocmd FileType haskell setlocal omnifunc=necoghc#omnifunc
+
+    " Disable the neosnippet preview candidate window
+    " When enabled, there can be too much visual noise
+    " especially when splits are used.
+    set completeopt-=preview

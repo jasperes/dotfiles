@@ -1,13 +1,15 @@
 dots:
-  - gconf
   - config
+  - gconf
   - local
   - mpd
   - ncmpcpp
+  - tmux.conf
+  - vim
+  - vimrc
   - Xresources
-  - vimrc.local
-  - vimrc.bundles.local
 
 ignore:
   - bootstrap.yml
   - README.md
+
