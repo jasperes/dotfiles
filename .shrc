@@ -1,0 +1,39 @@
+# ======================== VARIABLES ======================== #
+
+SHELL_NAME="$(ps -p $$ -o 'comm=')"
+
+# ======================== PATH ======================== #
+
+if [ -d "$HOME/bin" ] ; then
+    PATH="$HOME/bin:$PATH"
+fi
+
+if [ -d "$HOME/.local/bin" ] ; then
+    PATH="$HOME/.local/bin:$PATH"
+fi
+
+# ======================== ALIAS ======================== #
+
+# vim
+alias vim="nvim"
+
+# sudo
+alias sudo="sudo env PATH=$PATH "
+
+# ======================== FUNCTIONS ======================== #
+
+update-completions() {
+    # kubectl
+    command -v kubectl > /dev/null && source <(kubectl completion $SHELL_NAME)
+
+    # terraform
+    command -v terraform > /dev/null && complete -o nospace -C terraform terraform
+}
+
+# ======================== IMPORTS ======================== #
+
+# mise
+# command -v mise > /dev/null && source <(mise activate $SHELL_NAME)
+# command -v mise > /dev/null && source <(mise completion $SHELL_NAME)
+
+update-completions

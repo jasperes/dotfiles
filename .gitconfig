@@ -1,0 +1,10 @@
+[core]
+    editor = nvim
+    filemode = true
+
+[init]
+    defaultBranch = main
+
+[user]
+    email = jonathan.peres@protonmail.com
+    name = Jonathan Peres

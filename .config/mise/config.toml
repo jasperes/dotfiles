@@ -1,0 +1,172 @@
+[settings]
+dotfiles.root = "~/.dotfiles"
+dotfiles.default_mode = "symlink-each"
+
+[dotfiles]
+"~/" = { source = "~/.dotfiles", mode = "symlink-each" }
+
+# Dracula
+"~/.icons/Dracula-cursors" = { source = "~/.themes/Dracula/kde/cursors/Dracula-cursors", mode = "symlink" }
+"~/.local/share/icons/Dracula" = { source = "~/.icons/Dracula", mode = "symlink" }
+"~/.local/share/icons/Dracula-cursors" = { source = "~/.themes/Dracula/kde/cursors/Dracula-cursors", mode = "symlink" }
+"~/.config/assets" = { source = "~/.themes/Dracula/assets", mode = "symlink" }
+"~/.config/gtk-2.0/Dracula" = { source = "~/.themes/Dracula/gtk-2.0", mode = "symlink" }
+"~/.config/gtk-3.0/Dracula" = { source = "~/.themes/Dracula/gtk-3.0", mode = "symlink" }
+"~/.config/gtk-3.20/Dracula" = { source = "~/.themes/Dracula/gtk-3.20", mode = "symlink" }
+"~/.config/gtk-4.0/Dracula" = { source = "~/.themes/Dracula/gtk-4.0", mode = "symlink" }
+"~/.config/gtk-4.0/gtk.css" = { source = "~/.themes/Dracula/gtk-4.0/gtk.css", mode = "symlink" }
+"~/.config/gtk-4.0/gtk-dark.css" = { source = "~/.themes/Dracula/gtk-4.0/gtk-dark.css", mode = "symlink" }
+"~/.local/share/aurorae/themes/Dracula" = { source = "~/.themes/Dracula/kde/aurorae/Dracula", mode = "symlink" }
+"~/.local/share/color-schemes/Dracula.colors" = { source = "~/.themes/Dracula/kde/color-schemes/Dracula.colors", mode = "symlink" }
+"~/.local/share/plasma/desktoptheme/Dracula" = { source = "~/.themes/Dracula/kde/plasma/desktoptheme/Dracula", mode = "symlink" }
+"~/.local/share/plasma/desktoptheme/Dracula-Solid" = { source = "~/.themes/Dracula/kde/plasma/desktoptheme/Dracula-Solid", mode = "symlink" }
+"~/.local/share/plasma/look-and-feel/Dracula-kde5" = { source = "~/.themes/Dracula/kde/plasma/look-and-feel/Dracula", mode = "symlink" }
+"~/.local/share/plasma/look-and-feel/Dracula-kde6" = { source = "~/.themes/Dracula/kde/plasma/look-and-feel/Plasma6/Dracula", mode = "symlink" }
+
+[bootstrap.repos]
+# Oh My ZSH - Plugins
+"~/.oh-my-zsh/custom/plugins/zsh-autocomplete" = { url = "git@github.com:marlonrichert/zsh-autocomplete.git" }
+"~/.oh-my-zsh/custom/plugins/zsh-completions" = { url = "git@github.com:zsh-users/zsh-completions.git" }
+"~/.oh-my-zsh/custom/plugins/zsh-autosuggestions" = { url = "git@github.com:zsh-users/zsh-autosuggestions.git" }
+"~/.oh-my-zsh/custom/plugins/zsh-history-substring-search" = { url = "git@github.com:zsh-users/zsh-history-substring-search.git" }
+"~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting" = { url = "git@github.com:zsh-users/zsh-syntax-highlighting.git" }
+"~/.oh-my-zsh/custom/plugins/autocomplete" = { url = "git@github.com:TamCore/autoupdate-oh-my-zsh-plugins.git" }
+"~/.oh-my-zsh/custom/plugins/zsh-mise" = { url = "git@github.com:wintermi/zsh-mise.git" }
+
+# Oh My ZSH - Themes
+"~/.oh-my-zsh/themes/dracula" = { url = "git@github.com:dracula/zsh.git" }
+"~/.oh-my-zsh/themes/dracula-powerlevel10k" = { url = "git@github.com:dracula/powerlevel10k.git" }
+"~/.oh-my-zsh/themes/powerlevel10k" = { url = "git@github.com:romkatv/powerlevel10k.git" }
+
+# Oh My Posh - Themes
+"~/.oh-my-posh/themes/dracula" = { url = "git@github.com:dracula/oh-my-posh.git" }
+"~/.oh-my-posh/themes/dracula-powerlevel10k" = { url = "git@github.com:dracula/p10k-oh-my-posh.git" }
+
+# Programs
+"~/.local/opt/reshade" = { url = "git@github.com:kevinlekiller/reshade-steam-proton.git" }
+
+# Desktop Environment Themes
+"~/.themes/Dracula" = { url = "git@github.com:dracula/gtk.git" }
+"~/.icons/Dracula" = { url = "git@github.com:m4thewz/dracula-icons.git" }
+
+[bootstrap.packages]
+"pacman:linux-cachyos" = "latest"
+"pacman:linux-cachyos-headers" = "latest"
+"pacman:linux-cachyos-lts" = "latest"
+"pacman:linux-cachyos-lts-headers" = "latest"
+"pacman:cachyos-gaming-applications" = "latest"
+"pacman:cachyos-gaming-meta" = "latest"
+"pacman:python" = "latest"
+"pacman:perl" = "latest"
+"pacman:neovim" = "latest"
+"pacman:vlc" = "latest"
+"pacman:vlc-plugins-all" = "latest"
+"pacman:ffmpeg" = "latest"
+"pacman:ffmpegthumbs" = "latest"
+"pacman:ffmpegthumbnailer" = "latest"
+"pacman:git" = "latest"
+"pacman:tmux" = "latest"
+"pacman:zsh" = "latest"
+"pacman:tree" = "latest"
+"pacman:expect" = "latest"
+"pacman:fastfetch" = "latest"
+"pacman:btop" = "latest"
+"pacman:nvtop" = "latest"
+"pacman:iotop" = "latest"
+"pacman:nethogs" = "latest"
+"pacman:fuse2" = "latest"
+"pacman:ntfs-3g" = "latest"
+"pacman:discord" = "latest"
+"pacman:firefox" = "latest"
+"pacman:code" = "latest"
+"pacman:flatpak" = "latest"
+
+[tools]
+"pipx:unrpa" = "latest"
+powershell = "7"
+python = "3.13"
+usage = "latest"
+uv = "latest"
+
+[tasks."jasperes:shell"]
+hide = true
+shell = "bash -c"
+usage = """
+    flag "--bin -b <bin>" default="/bin/zsh"
+"""
+run = """
+    set -e
+
+    SHELL_BIN="${usage_bin}"
+
+    # add shells
+    SHELLS_FILE=/etc/shells
+
+    ## add zsh
+    ZSH_FILE=/bin/zsh
+    if [[ -f $ZSH_FILE ]] && [[ -z $(grep $ZSH_FILE $SHELLS_FILE) ]]; then
+        echo $ZSH_FILE | sudo tee -a $SHELLS_FILE
+    fi
+
+    ## add tmux
+    TMUX_FILE=/bin/tmux
+    if [[ -f $TMUX_FILE ]] && [[ -z $(grep $TMUX_FILE $SHELLS_FILE) ]]; then
+        echo $TMUX_FILE | sudo tee -a $SHELLS_FILE
+    fi
+
+    # configure default shell
+    chsh -s $SHELL_BIN $USER
+"""
+
+[tasks."jasperes:swapfile"]
+hide = true
+shell = "bash -c"
+usage = """
+    flag "--file -f <file>" default="/swapfile"
+    flag "--size -s <size>" default="16384"
+"""
+run = """
+    set -e
+
+    SWAP_FILE="${usage_file}"
+    SWAP_SIZE="${usage_size}"
+
+    # target directory to check filesystem type
+    TARGET_DIR=$(dirname "$SWAP_FILE")
+    FS_TYPE=$(df -T "$TARGET_DIR" | awk 'NR==2 {print $2}')
+
+    # check if swapfile exists and matches requested size
+    CURRENT_SIZE=$(sudo wc -c "$SWAP_FILE" | awk '{print $1}' || echo '0')
+    EXPECTED_SIZE=$((SWAP_SIZE * 1000000))
+
+    if [[ "$CURRENT_SIZE" != "$EXPECTED_SIZE" ]]; then
+        # delete current swapfile safely
+        if [[ -f "$SWAP_FILE" ]]; then
+            sudo swapoff "$SWAP_FILE" || true
+            sudo rm -f "$SWAP_FILE"
+        fi
+
+        # conditional creation based on filesystem
+        if [[ "$FS_TYPE" == "btrfs" ]]; then
+            # btrfs
+            sudo btrfs filesystem mkswapfile --size "${SWAP_SIZE}m" "$SWAP_FILE"
+        else
+            # fallback dd way for ext4/xfs
+            sudo dd if=/dev/zero of="$SWAP_FILE" bs=1MB count="$SWAP_SIZE" status=progress
+        fi
+    fi
+
+    # setup swap permissions and activate
+    if [[ -z $(swapon --show | grep "$SWAP_FILE file") ]]; then
+        sudo chmod 600 "$SWAP_FILE"
+        sudo mkswap "$SWAP_FILE"
+        sudo swapon -p 10 "$SWAP_FILE"
+    fi
+
+    # persist swap in fstab
+    SWAP_CONFIG="$SWAP_FILE swap swap defaults,pri=10 0 0"
+    FSTAB=/etc/fstab
+    if [[ -z $(grep -F "$SWAP_FILE" "$FSTAB") ]]; then
+        echo "$SWAP_CONFIG" | sudo tee -a $FSTAB
+    fi
+"""
