@@ -1,0 +1,68 @@
+[dotfiles]
+# Dracula - Desktop Theme
+"~/.themes/Dracula" = { source = "~/.dracula/themes", mode = "symlink" }
+"~/.icons/Dracula" = { source = "~/.dracula/icons", mode = "symlink" }
+"~/.icons/Dracula-cursors" = { source = "~/.dracula/themes/kde/cursors/Dracula-cursors", mode = "symlink" }
+"~/.local/share/icons/Dracula" = { source = "~/.dracula/icons", mode = "symlink" }
+"~/.local/share/icons/Dracula-cursors" = { source = "~/.dracula/themes/kde/cursors/Dracula-cursors", mode = "symlink" }
+"~/.config/assets" = { source = "~/.dracula/themes/assets", mode = "symlink" }
+"~/.config/gtk-2.0/Dracula" = { source = "~/.dracula/themes/gtk-2.0", mode = "symlink" }
+"~/.config/gtk-3.0/Dracula" = { source = "~/.dracula/themes/gtk-3.0", mode = "symlink" }
+"~/.config/gtk-3.20/Dracula" = { source = "~/.dracula/themes/gtk-3.20", mode = "symlink" }
+"~/.config/gtk-4.0/Dracula" = { source = "~/.dracula/themes/gtk-4.0", mode = "symlink" }
+"~/.config/gtk-4.0/gtk.css" = { source = "~/.dracula/themes/gtk-4.0/gtk.css", mode = "symlink" }
+"~/.config/gtk-4.0/gtk-dark.css" = { source = "~/.dracula/themes/gtk-4.0/gtk-dark.css", mode = "symlink" }
+"~/.local/share/aurorae/themes/Dracula" = { source = "~/.dracula/themes/kde/aurorae/Dracula", mode = "symlink" }
+"~/.local/share/color-schemes/Dracula.colors" = { source = "~/.dracula/themes/kde/color-schemes/Dracula.colors", mode = "symlink" }
+"~/.local/share/plasma/desktoptheme/Dracula" = { source = "~/.dracula/themes/kde/plasma/desktoptheme/Dracula", mode = "symlink" }
+"~/.local/share/plasma/desktoptheme/Dracula-Solid" = { source = "~/.dracula/themes/kde/plasma/desktoptheme/Dracula-Solid", mode = "symlink" }
+"~/.local/share/plasma/look-and-feel/Dracula-kde5" = { source = "~/.dracula/themes/kde/plasma/look-and-feel/Dracula", mode = "symlink" }
+"~/.local/share/plasma/look-and-feel/Dracula-kde6" = { source = "~/.dracula/themes/kde/plasma/look-and-feel/Plasma6/Dracula", mode = "symlink" }
+# Dracula - Oh My ZSH
+"~/.oh-my-zsh/themes/lib" = { source = "~/.dracula/oh-my-zsh/lib", mode = "symlink" }
+"~/.oh-my-zsh/themes/dracula.zsh-theme" = { source = "~/.dracula/oh-my-zsh/dracula.zsh-theme", mode = "symlink" }
+"~/.p10k.zsh" = { source = "~/.dracula/oh-my-zsh-p10k/files/.p10k.zsh", mode = "symlink" }
+"~/.dracula.zsh-syntax-highlighting.sh" = { source = "~/.dracula/zsh-syntax-highlighting/zsh-syntax-highlighting.sh", mode = "symlink" }
+# Dracula - gedit
+"~/.local/share/gedit/styles/dracula.xml" = { source = "~/.dracula/gedit/dracula-46.xml", mode = "symlink" }
+# Dracula - gtksourceview
+"~/.local/share/gtksourceview-5/styles/dracula.xml" = { source = "~/.dracula/gtksourceview/dracula.xml", mode = "symlink" }
+# Dracula - gitconfig
+"~/.dracula.gitconfig" = { source = "~/.dracula/gitconfig/config/gitconfig", mode = "symlink" }
+# Dracula - kitty
+"~/.config/kitty/diff.conf" = { source = "~/.dracula/kitty/diff.conf", mode = "symlink" }
+"~/.config/kitty/dracula.conf" = { source = "~/.dracula/kitty/dracula.conf", mode = "symlink" }
+"~/.Xresources" = { source = "~/.dracula/xresources/Xresources", mode = "symlink" }
+# Dracula - tmux
+"~/.tmux/plugins/dracula" = { source = "~/.dracula/tmux", mode = "symlink" }
+# Dracula - VIM
+"~/.vim/colors" = { source = "~/.dracula/vim/colors", mode = "symlink-each" }
+"~/.vim/autoload" = { source = "~/.dracula/vim/autoload", mode = "symlink-each" }
+"~/.config/nvim/colors" = { source = "~/.dracula/vim/colors", mode = "symlink-each" }
+"~/.config/nvim/autoload" = { source = "~/.dracula/vim/autoload", mode = "symlink-each" }
+
+[bootstrap.repos]
+# Dracula - Oh My Posh
+"~/.dracula/oh-my-posh" = { url = "git@github.com:dracula/oh-my-posh.git" }
+"~/.dracula/oh-my-posh-p10k" = { url = "git@github.com:dracula/p10k-oh-my-posh.git" }
+# Dracula - Oh My ZSH
+"~/.dracula/oh-my-zsh" = { url = "git@github.com:dracula/zsh.git" }
+"~/.dracula/oh-my-zsh-p10k" = { url = "git@github.com:dracula/powerlevel10k.git" }
+"~/.dracula/zsh-syntax-highlighting" = { url = "git@github.com:dracula/zsh-syntax-highlighting.git" }
+# Dracula - Terminal
+"~/.dracula/gitconfig" = { url = "git@github.com:dracula/git.git" }
+"~/.dracula/xresources" = { url = "git@github.com:dracula/Xresources.git" }
+"~/.dracula/tmux" = { url = "git@github.com:dracula/tmux.git" }
+"~/.dracula/vim" = { url = "git@github.com:dracula/vim.git" }
+"~/.dracula/kitty" = { url = "git@github.com:dracula/kitty.git" }
+# Dracula - Manual Installed at ~/.dracula.sh
+"~/.dracula/man-pages" = { url = "git@github.com:dracula/man-pages.git" }
+"~/.dracula/fzf" = { url = "git@github.com:dracula/fzf.git" }
+# Dracula - Gnome
+"~/.dracula/gedit" = { url = "git@github.com:dracula/gedit.git" }
+"~/.dracula/gtksourceview" = { url = "git@github.com:dracula/gtksourceview.git" }
+# Dracula - KDE
+"~/.dracula/kate" = { url = "git@github.com:dracula/kate.git" }
+# Dracula - Themes
+"~/.dracula/themes" = { url = "git@github.com:dracula/gtk.git" }
+"~/.dracula/icons" = { url = "git@github.com:m4thewz/dracula-icons.git" }

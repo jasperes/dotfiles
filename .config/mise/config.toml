@@ -3,25 +3,10 @@ dotfiles.root = "~/.dotfiles"
 dotfiles.default_mode = "symlink-each"
 
 [dotfiles]
-"~/" = { source = "~/.dotfiles", mode = "symlink-each" }
-
-# Dracula
-"~/.icons/Dracula-cursors" = { source = "~/.themes/Dracula/kde/cursors/Dracula-cursors", mode = "symlink" }
-"~/.local/share/icons/Dracula" = { source = "~/.icons/Dracula", mode = "symlink" }
-"~/.local/share/icons/Dracula-cursors" = { source = "~/.themes/Dracula/kde/cursors/Dracula-cursors", mode = "symlink" }
-"~/.config/assets" = { source = "~/.themes/Dracula/assets", mode = "symlink" }
-"~/.config/gtk-2.0/Dracula" = { source = "~/.themes/Dracula/gtk-2.0", mode = "symlink" }
-"~/.config/gtk-3.0/Dracula" = { source = "~/.themes/Dracula/gtk-3.0", mode = "symlink" }
-"~/.config/gtk-3.20/Dracula" = { source = "~/.themes/Dracula/gtk-3.20", mode = "symlink" }
-"~/.config/gtk-4.0/Dracula" = { source = "~/.themes/Dracula/gtk-4.0", mode = "symlink" }
-"~/.config/gtk-4.0/gtk.css" = { source = "~/.themes/Dracula/gtk-4.0/gtk.css", mode = "symlink" }
-"~/.config/gtk-4.0/gtk-dark.css" = { source = "~/.themes/Dracula/gtk-4.0/gtk-dark.css", mode = "symlink" }
-"~/.local/share/aurorae/themes/Dracula" = { source = "~/.themes/Dracula/kde/aurorae/Dracula", mode = "symlink" }
-"~/.local/share/color-schemes/Dracula.colors" = { source = "~/.themes/Dracula/kde/color-schemes/Dracula.colors", mode = "symlink" }
-"~/.local/share/plasma/desktoptheme/Dracula" = { source = "~/.themes/Dracula/kde/plasma/desktoptheme/Dracula", mode = "symlink" }
-"~/.local/share/plasma/desktoptheme/Dracula-Solid" = { source = "~/.themes/Dracula/kde/plasma/desktoptheme/Dracula-Solid", mode = "symlink" }
-"~/.local/share/plasma/look-and-feel/Dracula-kde5" = { source = "~/.themes/Dracula/kde/plasma/look-and-feel/Dracula", mode = "symlink" }
-"~/.local/share/plasma/look-and-feel/Dracula-kde6" = { source = "~/.themes/Dracula/kde/plasma/look-and-feel/Plasma6/Dracula", mode = "symlink" }
+"~/" = { source = "~/.dotfiles", mode = "symlink-each", exclude = ["README.md"] }
+# VSCode OSS
+"~/.vscode-oss" = { source = "~/.dotfiles/.vscode", mode = "symlink-each" }
+"~/.config/Code - OSS/User/settings.json" = { source = "~/.dotfiles/.config/Code/User/settings.json", mode = "symlink" }
 
 [bootstrap.repos]
 # Oh My ZSH - Plugins
@@ -32,30 +17,20 @@ dotfiles.default_mode = "symlink-each"
 "~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting" = { url = "git@github.com:zsh-users/zsh-syntax-highlighting.git" }
 "~/.oh-my-zsh/custom/plugins/autocomplete" = { url = "git@github.com:TamCore/autoupdate-oh-my-zsh-plugins.git" }
 "~/.oh-my-zsh/custom/plugins/zsh-mise" = { url = "git@github.com:wintermi/zsh-mise.git" }
-
-# Oh My ZSH - Themes
-"~/.oh-my-zsh/themes/dracula" = { url = "git@github.com:dracula/zsh.git" }
-"~/.oh-my-zsh/themes/dracula-powerlevel10k" = { url = "git@github.com:dracula/powerlevel10k.git" }
 "~/.oh-my-zsh/themes/powerlevel10k" = { url = "git@github.com:romkatv/powerlevel10k.git" }
-
-# Oh My Posh - Themes
-"~/.oh-my-posh/themes/dracula" = { url = "git@github.com:dracula/oh-my-posh.git" }
-"~/.oh-my-posh/themes/dracula-powerlevel10k" = { url = "git@github.com:dracula/p10k-oh-my-posh.git" }
 
 # Programs
 "~/.local/opt/reshade" = { url = "git@github.com:kevinlekiller/reshade-steam-proton.git" }
 
-# Desktop Environment Themes
-"~/.themes/Dracula" = { url = "git@github.com:dracula/gtk.git" }
-"~/.icons/Dracula" = { url = "git@github.com:m4thewz/dracula-icons.git" }
-
 [bootstrap.packages]
+# CachyOS
 "pacman:linux-cachyos" = "latest"
 "pacman:linux-cachyos-headers" = "latest"
 "pacman:linux-cachyos-lts" = "latest"
 "pacman:linux-cachyos-lts-headers" = "latest"
 "pacman:cachyos-gaming-applications" = "latest"
 "pacman:cachyos-gaming-meta" = "latest"
+"pacman:shelly-flatpak-backend" = "latest"
 "pacman:python" = "latest"
 "pacman:perl" = "latest"
 "pacman:neovim" = "latest"
@@ -79,7 +54,8 @@ dotfiles.default_mode = "symlink-each"
 "pacman:discord" = "latest"
 "pacman:firefox" = "latest"
 "pacman:code" = "latest"
-"pacman:flatpak" = "latest"
+"pacman:etcher-bin" = "latest"
+"pacman:python-pygments" = "latest"
 
 [tools]
 "pipx:unrpa" = "latest"

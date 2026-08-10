@@ -1,0 +1,150 @@
+{
+  // ===== CHAT SPECIFIC =====
+  "chat.agent.enabled": false,
+  "chat.commandCenter.enabled": false,
+  "chat.detectParticipant.enabled": false,
+  "chat.checkpoints.enabled": false,
+  "chat.editRequests": "none",
+  "chat.emptyState.history.enabled": false,
+  "chat.sendElementsToChat.enabled": false,
+  "chat.useAgentsMdFile": false,
+  "chat.useNestedAgentsMdFiles": false,
+  "chat.math.enabled": false,
+  "chat.viewTitle.enabled": false,
+  "chat.notifyWindowOnConfirmation": "off",
+  "chat.notifyWindowOnResponseReceived": "off",
+  "chat.tools.terminal.autoReplyToPrompts": false,
+  "chat.tools.terminal.enableAutoApprove": false,
+  "chat.tools.global.autoApprove": false,
+  "chat.tools.urls.autoApprove": [],
+  "chat.mcp.access": "none",
+  "chat.mcp.discovery.enabled": {
+    "claude-desktop": false,
+    "windsurf": false,
+    "cursor-global": false,
+    "cursor-workspace": false
+  },
+
+  // ===== INLINE SUGGESTIONS & CODE EDITING =====
+  "github.copilot.enable": {
+    "*": false,
+    "plaintext": false,
+    "markdown": false,
+    "scminput": false
+  },
+  "github.copilot.editor.enableCodeActions": false,
+  "github.copilot.nextEditSuggestions.enabled": false,
+  "github.copilot.nextEditSuggestions.fixes": false,
+  "github.copilot.renameSuggestions.triggerAutomatically": false,
+  "editor.inlineSuggest.edits.allowCodeShifting": "never",
+  "editor.inlineSuggest.edits.renderSideBySide": "never",
+  "editor.inlineSuggest.minShowDelay": 10000, // 10 seconds (effectively disables)
+  "inlineChat.accessibleDiffView": "off",
+
+  // ===== COPILOT CHAT SPECIFIC =====
+  "github.copilot.chat.localeOverride": "off",
+  "github.copilot.chat.useProjectTemplates": false,
+  "github.copilot.chat.scopeSelection": false,
+  "github.copilot.chat.terminalChatLocation": "none",
+  "github.copilot.chat.codesearch.enabled": false,
+  "github.copilot.chat.edits.suggestRelatedFilesFromGitHistory": false,
+  "github.copilot.chat.customOAIModels": [],
+  "github.copilot.chat.agent.autoFix": false,
+  "github.copilot.chat.copilotDebugCommand.enabled": false,
+
+  // ===== AGENT SETTINGS =====
+  "chat.agent.maxRequests": 0,
+  "chat.agent.thinking.collapsedTools": "always",
+  "chat.agent.thinkingStyle": "off",
+  "chat.customAgentInSubagent.enabled": false,
+
+  // ===== SEARCH & SETTINGS UI =====
+  "workbench.settings.showAISearchToggle": false,
+  "workbench.commandPalette.experimental.askChatLocation": "none",
+  "search.searchView.semanticSearchBehavior": "manual",
+  "search.searchView.keywordSuggestions": false,
+
+  // ===== TERMINAL INTEGRATION =====
+  "terminal.integrated.initialHint": false,
+  "terminal.integrated.aiSuggestions.enabled": false,
+
+  // ===== EXTENSION‑SPECIFIC AI (examples) =====
+  "gitlab.duoChat.enabled": false,
+  "python.analysis.aiCompletion": false,
+  "java.ai.codeCompletion": false,
+  "javascript.suggest.ai": false,
+  "typescript.suggest.ai": false,
+
+  // ===== TELEMETRY & DATA COLLECTION =====
+  "telemetry.enableTelemetry": false,
+  "telemetry.telemetryLevel": "off",
+  "github.copilot.advanced.telemetry": false,
+  "editor.fontFamily": "jetbrains-mono-nerd-font, 'JetBrains Mono NL', Consolas, 'Courier New', monospace",
+  // "terminal.integrated.fontFamily": "jetbrains-mono-nerd-font, 'JetBrains Mono NL', Consolas, 'Courier New', monospace",
+  // "workbench.settings.applyToAllProfiles": [
+  //     "terminal.integrated.fontFamily"
+  // ],
+  "editor.fontLigatures": true,
+  // "terminal.integrated.fontLigatures.enabled": true,
+  "editor.tokenColorCustomizations": {
+    "textMateRules": [
+      {
+        // This line should be in italic.
+        "scope": [
+          "comment.line"
+        ],
+        "settings": {
+          "fontStyle": "italic"
+        }
+      },
+      {
+        /* This line should be in bold. */
+        "scope": [
+          "comment.block"
+        ],
+        "settings": {
+          "fontStyle": "bold"
+        }
+      },
+      {
+        /** This line should be in italic bold. */
+        "scope": [
+          "comment.block.documentation"
+        ],
+        "settings": {
+          "fontStyle": "italic bold"
+        }
+      }
+    ]
+  },
+
+  // MARK: EDITOR
+  "editor.rulers": [160],
+  "editor.minimap.showSlider": "always",
+  "diffEditor.ignoreTrimWhitespace": false,
+  // "editor.minimap.renderCharacters": true,
+  "files.eol": "\n",
+  "workbench.startupEditor": "none",
+  "workbench.editor.empty.hint": "hidden",
+  // "terminal.integrated.defaultProfile.windows": "zsh",
+
+  // MARK: EXTENSIONS
+  "docker.extension.enableComposeLanguageServer": false,
+  "azureTerraform.survey": {
+    "surveyPromptDate": "2025-08-08T11:25:54.647Z",
+    "surveyPromptIgnoredCount": 2
+  },
+  "svg.preview.mode": "svg",
+  "workbench.editorAssociations": {
+    "*.svg": "default"
+  },
+  "yaml.maxItemsComputed": 9999,
+  "chat.disableAIFeatures": true,
+  "claudeCode.preferredLocation": "panel",
+  "mise.binPath": "/home/jasperes/.local/bin/mise",
+  "workbench.colorTheme": "Dracula Theme"
+
+  // MARK: OTHERS
+
+
+}

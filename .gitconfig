@@ -8,3 +8,6 @@
 [user]
     email = jonathan.peres@protonmail.com
     name = Jonathan Peres
+
+[include]
+  path = ~/.dracula.gitconfig

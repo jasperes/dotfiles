@@ -2,6 +2,11 @@
 
 SHELL_NAME="$(ps -p $$ -o 'comm=')"
 
+# steam
+MANGOHUD=1
+PROTON_ENABLE_WAYLAND=1
+PROTON_ENABLE_HDR=1
+
 # ======================== PATH ======================== #
 
 if [ -d "$HOME/bin" ] ; then
@@ -20,6 +25,9 @@ alias vim="nvim"
 # sudo
 alias sudo="sudo env PATH=$PATH "
 
+# cat
+alias cat="ccat"
+
 # ======================== FUNCTIONS ======================== #
 
 update-completions() {
@@ -37,3 +45,5 @@ update-completions() {
 # command -v mise > /dev/null && source <(mise completion $SHELL_NAME)
 
 update-completions
+
+source ~/.dracula.sh

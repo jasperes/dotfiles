@@ -1,0 +1,3 @@
+set termguicolors
+syntax enable
+colorscheme dracula
