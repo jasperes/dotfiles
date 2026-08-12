@@ -1,2 +1,6 @@
 set background=dark
-colorscheme dracula
+
+try
+  colorscheme dracula
+catch
+endtry

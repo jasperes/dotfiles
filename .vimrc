@@ -1,3 +1,7 @@
 set termguicolors
 syntax enable
-colorscheme dracula
+
+try
+  colorscheme dracula
+catch
+endtry

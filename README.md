@@ -10,4 +10,4 @@ Look at files in `.config/mise` to see what it will install and configure.
 
 - Save this project to `~/.dotfiles`
 - Copy folder `~/.dotiles/.config/mise` to `~/.config/mise`
-- Run `mise bootstrap`
+- Run `mise run install`

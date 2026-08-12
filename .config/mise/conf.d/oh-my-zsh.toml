@@ -1,0 +1,10 @@
+[bootstrap.repos]
+# Oh My ZSH - Plugins
+"~/.oh-my-zsh/custom/plugins/zsh-autocomplete" = { url = "git@github.com:marlonrichert/zsh-autocomplete.git" }
+"~/.oh-my-zsh/custom/plugins/zsh-completions" = { url = "git@github.com:zsh-users/zsh-completions.git" }
+"~/.oh-my-zsh/custom/plugins/zsh-autosuggestions" = { url = "git@github.com:zsh-users/zsh-autosuggestions.git" }
+"~/.oh-my-zsh/custom/plugins/zsh-history-substring-search" = { url = "git@github.com:zsh-users/zsh-history-substring-search.git" }
+"~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting" = { url = "git@github.com:zsh-users/zsh-syntax-highlighting.git" }
+"~/.oh-my-zsh/custom/plugins/autocomplete" = { url = "git@github.com:TamCore/autoupdate-oh-my-zsh-plugins.git" }
+"~/.oh-my-zsh/custom/plugins/zsh-mise" = { url = "git@github.com:wintermi/zsh-mise.git" }
+"~/.oh-my-zsh/themes/powerlevel10k" = { url = "git@github.com:romkatv/powerlevel10k.git" }

@@ -46,4 +46,5 @@ update-completions() {
 
 update-completions
 
-source ~/.dracula.sh
+[[ -f ~/.mise.sh ]] && source ~/.mise.sh
+[[ -f ~/.dracula.sh ]] && source ~/.dracula.sh
