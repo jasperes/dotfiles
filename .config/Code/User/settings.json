@@ -142,7 +142,8 @@
   "chat.disableAIFeatures": true,
   "claudeCode.preferredLocation": "panel",
   "mise.binPath": "/home/jasperes/.local/bin/mise",
-  "workbench.colorTheme": "Dracula Theme"
+  "workbench.colorTheme": "Dracula Theme",
+  "workbench.iconTheme": "material-icon-theme"
 
   // MARK: OTHERS
 

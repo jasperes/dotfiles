@@ -3,7 +3,7 @@ dotfiles.root = "~/.dotfiles"
 dotfiles.default_mode = "symlink-each"
 
 [dotfiles]
-"~/" = { source = "~/.dotfiles", mode = "symlink-each" }
+"~/" = { source = "~/.dotfiles", mode = "symlink-each", exclude = [".git", ".env", "install.sh", "README.md", ".config/mise"] }
 # VSCode OSS
 "~/.vscode-oss" = { source = "~/.dotfiles/.vscode", mode = "symlink-each" }
 "~/.config/Code - OSS/User/settings.json" = { source = "~/.dotfiles/.config/Code/User/settings.json", mode = "symlink" }
@@ -21,41 +21,6 @@ dotfiles.default_mode = "symlink-each"
 
 # Programs
 "~/.local/opt/reshade" = { url = "git@github.com:kevinlekiller/reshade-steam-proton.git" }
-
-[bootstrap.packages]
-# CachyOS
-"pacman:linux-cachyos" = "latest"
-"pacman:linux-cachyos-headers" = "latest"
-"pacman:linux-cachyos-lts" = "latest"
-"pacman:linux-cachyos-lts-headers" = "latest"
-"pacman:cachyos-gaming-applications" = "latest"
-"pacman:cachyos-gaming-meta" = "latest"
-"pacman:shelly-flatpak-backend" = "latest"
-"pacman:python" = "latest"
-"pacman:perl" = "latest"
-"pacman:neovim" = "latest"
-"pacman:vlc" = "latest"
-"pacman:vlc-plugins-all" = "latest"
-"pacman:ffmpeg" = "latest"
-"pacman:ffmpegthumbs" = "latest"
-"pacman:ffmpegthumbnailer" = "latest"
-"pacman:git" = "latest"
-"pacman:tmux" = "latest"
-"pacman:zsh" = "latest"
-"pacman:tree" = "latest"
-"pacman:expect" = "latest"
-"pacman:fastfetch" = "latest"
-"pacman:btop" = "latest"
-"pacman:nvtop" = "latest"
-"pacman:iotop" = "latest"
-"pacman:nethogs" = "latest"
-"pacman:fuse2" = "latest"
-"pacman:ntfs-3g" = "latest"
-"pacman:discord" = "latest"
-"pacman:firefox" = "latest"
-"pacman:code" = "latest"
-"pacman:etcher-bin" = "latest"
-"pacman:python-pygments" = "latest"
 
 [tools]
 "pipx:unrpa" = "latest"
