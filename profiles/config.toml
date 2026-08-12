@@ -3,7 +3,7 @@ dotfiles.root = "~/.dotfiles"
 dotfiles.default_mode = "symlink-each"
 
 [dotfiles]
-"~/" = { source = "~/.dotfiles", mode = "symlink-each", exclude = ["README.md"] }
+"~/" = { source = "~/.dotfiles", mode = "symlink-each" }
 # VSCode OSS
 "~/.vscode-oss" = { source = "~/.dotfiles/.vscode", mode = "symlink-each" }
 "~/.config/Code - OSS/User/settings.json" = { source = "~/.dotfiles/.config/Code/User/settings.json", mode = "symlink" }
