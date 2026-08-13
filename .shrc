@@ -2,19 +2,20 @@
 
 SHELL_NAME="$(ps -p $$ -o 'comm=')"
 
-# steam
-MANGOHUD=1
-PROTON_ENABLE_WAYLAND=1
-PROTON_ENABLE_HDR=1
+if [ -f ~/.env ]; then
+    set -a
+    source ~/.env
+    set +a
+fi
 
 # ======================== PATH ======================== #
 
 if [ -d "$HOME/bin" ] ; then
-    PATH="$HOME/bin:$PATH"
+    export PATH="$HOME/bin:$PATH"
 fi
 
 if [ -d "$HOME/.local/bin" ] ; then
-    PATH="$HOME/.local/bin:$PATH"
+    export PATH="$HOME/.local/bin:$PATH"
 fi
 
 # ======================== ALIAS ======================== #
@@ -46,5 +47,4 @@ update-completions() {
 
 update-completions
 
-[[ -f ~/.mise.sh ]] && source ~/.mise.sh
 [[ -f ~/.dracula.sh ]] && source ~/.dracula.sh

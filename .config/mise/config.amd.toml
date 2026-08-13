@@ -1,0 +1,14 @@
+[env]
+GPU = "amd"
+
+[bootstrap.packages]
+# Debian
+"apt:linux-headers-amd64" = "latest"
+"apt:firmware-linux-nonfree" = "latest"
+"apt:firmware-amd-graphics" = "latest"
+"apt:libgl1-mesa-dri" = "latest"
+"apt:libglx-mesa0" = "latest"
+"apt:mesa-vulkan-drivers" = "latest"
+"apt:xserver-xorg-video-all" = "latest"
+"apt:dkms" = "latest"
+"apt:vulkan-tools" = "latest"

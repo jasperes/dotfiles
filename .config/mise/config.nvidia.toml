@@ -1,0 +1,27 @@
+[env]
+GPU = "nvidia"
+
+[bootstrap.hooks.pre-packages]
+run = [
+    "dpkg --add-architecture i386",
+]
+
+[bootstrap.packages]
+"apt:linux-headers-amd64" = "latest"
+"apt:nvidia-kernel-common" = "latest"
+"apt:build-essential" = "latest"
+"apt:libglvnd-dev" = "latest"
+"apt:pkg-config" = "latest"
+"apt:libc6:i386" = "latest"
+
+[tasks."distro:setup:gpu"]
+run = """ # DEBIAN
+    {% if env.SYSTEM = 'debian' %}
+    mkdir -p ~/.temp && cd ~/.temp
+    wget https://developer.download.nvidia.com/compute/cuda/repos/debian13/x86_64/cuda-keyring_1.1-1_all.deb
+    sudo dpkg -i cuda-keyring_1.1-1_all.deb
+    sudo apt update
+    sudo apt upgrade
+    sudo apt -V install cuda-drivers
+    {% endif %}
+"""

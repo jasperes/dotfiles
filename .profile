@@ -1,15 +1,12 @@
 # if running bash
 if [ -n "$BASH_VERSION" ]; then
-    # include .bashrc if it exists
-    if [ -f "$HOME/.bashrc" ]; then
-	. "$HOME/.bashrc"
-    fi
-fi
+    [ -f "$HOME/.bashrc" ] && . "$HOME/.bashrc"
 
 # if running zsh
-if [ -n "$ZSH_VERSION" ]; then
-    # include .bashrc if it exists
-    if [ -f "$HOME/.zshrc" ]; then
-	. "$HOME/.zshrc"
-    fi
+elif [ -n "$ZSH_VERSION" ]; then
+    [ -f "$HOME/.zshrc" ] && . "$HOME/.zshrc"
+
+# if no shell found
+else
+    [ -f "$HOME/.shrc" ] && . "$HOME/.shrc"
 fi

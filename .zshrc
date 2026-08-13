@@ -5,7 +5,7 @@ autoload -U +X bashcompinit && bashcompinit
 
 # ======================== IMPORTS ======================== #
 
-source ~/.shrc
+[ -f "$HOME/.shrc" ] && . "$HOME/.shrc"
 # for x in $(ls ~/ -a | grep '.zshrc.'); do source "$x"; done
 
 # ======================== OH MY ZSH ======================== #

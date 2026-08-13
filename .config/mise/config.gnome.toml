@@ -1,0 +1,9 @@
+[env]
+DESKTOP = "gnome"
+
+[tasks."distro:setup:desktop"]
+run = [
+    { task = "distro:desktop:gnome:extensions" },
+    { task = "distro:desktop:gnome:sets" },
+    { task = "distro:desktop:gnome:shortcuts" },
+]

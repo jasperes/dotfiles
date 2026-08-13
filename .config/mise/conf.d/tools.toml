@@ -1,6 +1,0 @@
-[tools]
-"pipx:unrpa" = "latest"
-powershell = "7"
-python = "3.13"
-usage = "latest"
-uv = "latest"

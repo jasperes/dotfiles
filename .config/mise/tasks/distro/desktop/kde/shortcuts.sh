@@ -6,7 +6,7 @@
 
 SETTINGS_TOML="${HOME}/.config/mise/resources/kde.toml"
 
-[ ! -f "$SETTINGS_TOML" ] && echo "Error: Configuration file not found at $SETTINGS_TOML" && exit 1
+[ ! -f "$SETTINGS_TOML" ] && echo "Error: File not found '$SETTINGS_TOML'" && exit 1
 
 if command -v kwriteconfig6 &> /dev/null; then
     KCONFIG_BIN="kwriteconfig6"
@@ -19,11 +19,11 @@ fi
 
 yq eval '.kde.shortcuts | keys | .[]' "$SETTINGS_TOML" | while read -r desktop_key || [[ -n "$desktop_key" ]]; do
     [ -z "$desktop_key" ] && continue
+
     binding=$(yq eval ".kde.shortcuts.\"$desktop_key\".binding" "$SETTINGS_TOML")
     group=$(yq eval ".kde.shortcuts.\"$desktop_key\".group" "$SETTINGS_TOML")
 
-    echo "Configuring sub-group: $desktop_key"
-
+    echo "Shortcut: key='$desktop_key' | group='$group' | binding='$binding'"
     $KCONFIG_BIN --file ~/.config/kglobalshortcutsrc --group "$group" --group "$desktop_key" --key "_launch" "$binding"
 done
 

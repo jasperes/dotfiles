@@ -1,0 +1,9 @@
+[env]
+DESKTOP = "kde"
+
+[tasks."distro:setup:desktop"]
+run = [
+    { task = "distro:desktop:kde:fixes" },
+    { task = "distro:desktop:kde:shortcuts" },
+    { task = "distro:desktop:kde:theme" },
+]

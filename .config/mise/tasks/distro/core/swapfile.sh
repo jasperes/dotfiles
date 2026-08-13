@@ -1,9 +1,18 @@
 #!/usr/bin/env bash
 
+#MISE description=""
+#MISE hide=true
+#MISE tools={ yq="latest" }
+
 set -e
 
-SWAP_FILE="${usage_file}"
-SWAP_SIZE="${usage_size}"
+SETTINGS_TOML="${HOME}/.config/mise/resources/core.toml"
+
+[ ! -f "$SETTINGS_TOML" ] && echo "Error: File not found '$SETTINGS_TOML'" && exit 1
+
+# Extrai as configurações de swap a partir do arquivo TOML
+SWAP_FILE=$(yq eval '.core.swap.file' "$SETTINGS_TOML")
+SWAP_SIZE=$(yq eval '.core.swap.size' "$SETTINGS_TOML")
 
 # target directory to check filesystem type
 TARGET_DIR=$(dirname "$SWAP_FILE")
@@ -43,3 +52,5 @@ FSTAB=/etc/fstab
 if [[ -z $(grep -F "$SWAP_FILE" "$FSTAB") ]]; then
     echo "$SWAP_CONFIG" | sudo tee -a $FSTAB
 fi
+
+exit 0

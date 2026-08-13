@@ -1,0 +1,121 @@
+[env]
+SYSTEM = "debian"
+
+[bootstrap.packages]
+# libs
+"apt:curl" = "latest"
+"apt:wget" = "latest"
+"apt:build-essential" = "latest"
+"apt:pkg-config" = "latest"
+"apt:ffmpeg" = "latest"
+"apt:ffmpegthumbnailer" = "latest"
+
+# softwares
+"apt:flatpak" = "latest"
+"apt:gnome-shell-extensions" = "latest"
+"apt:gnome-software-plugin-flatpak" = "latest"
+"apt:kitty" = "latest"
+"apt:gparted" = "latest"
+
+# utils
+"apt:git" = "latest"
+"apt:tmux" = "latest"
+"apt:zsh" = "latest"
+"apt:rcm" = "latest"
+"apt:tree" = "latest"
+"apt:expect" = "latest"
+"apt:sshpass" = "latest"
+"apt:neovim" = "latest"
+"apt:fastfetch" = "latest"
+"apt:btop" = "latest"
+"apt:nvtop" = "latest"
+"apt:nethogs" = "latest"
+"apt:iotop" = "latest"
+"apt:steam-devices" = "latest"
+
+# zippers
+"apt:7zip" = "latest"
+"apt:p7zip-full" = "latest"
+"apt:bzip2" = "latest"
+"apt:gvfs" = "latest"
+"apt:arj" = "latest"
+"apt:lzip" = "latest"
+"apt:lzma" = "latest"
+"apt:lzop" = "latest"
+"apt:ncompress" = "latest"
+"apt:rzip" = "latest"
+"apt:squashfs-tools" = "latest"
+"apt:unace" = "latest"
+"apt:unalz" = "latest"
+"apt:unar" = "latest"
+"apt:xz-utils" = "latest"
+"apt:unzip" = "latest"
+"apt:zip" = "latest"
+
+# flatpak
+"flatpak:com.github.tchx84.Flatseal" = "latest"
+
+# launcher
+"flatpak:com.usebottles.bottles" = "latest"
+"flatpak:net.lutris.Lutris" = "latest"
+"flatpak:com.heroicgameslauncher.hgl" = "latest"
+"flatpak:com.valvesoftware.Steam" = "latest"
+
+# steam library
+"flatpak:com.github.Matoking.protontricks" = "latest"
+"flatpak:org.freedesktop.Platform.VulkanLayer.MangoHud" = "latest"
+"flatpak:org.freedesktop.Platform.VulkanLayer.gamescope" = "latest"
+"flatpak:org.freedesktop.Platform.VulkanLayer.vkBasalt" = "latest"
+"flatpak:com.valvesoftware.Steam.CompatibilityTool.Proton-GE" = "latest"
+# "flatpak:com.valvesoftware.Steam.CompatibilityTool.Boxtron" = "latest"
+
+# emulator
+"flatpak:net.rpcs3.RPCS3" = "latest"
+"flatpak:net.shadps4.shadPS4" = "latest"
+
+# games
+"flatpak:io.mrarm.mcpelauncher" = "latest"
+
+# share
+"flatpak:com.parsecgaming.parsec" = "latest"
+
+# image editors
+"flatpak:org.gimp.GIMP" = "latest"
+"flatpak:org.kde.krita" = "latest"
+"flatpak:org.inkscape.Inkscape" = "latest"
+
+# media viewer
+"flatpak:flathub org.gnome.gThumb" = "latest"
+"flatpak:org.videolan.VLC" = "latest"
+
+# office
+"flatpak:org.libreoffice.LibreOffice" = "latest"
+"flatpak:md.obsidian.Obsidian" = "latest"
+
+# infra
+"flatpak:io.missioncenter.MissionCenter" = "latest"
+"flatpak:org.virt_manager.virt-manager" = "latest"
+"flatpak:org.virt_manager.virt_manager.Extension.Qemu" = "latest"
+
+# ide
+"flatpak:com.jetbrains.IntelliJ-IDEA-Community" = "latest"
+"flatpak:io.dbeaver.DBeaverCommunity" = "latest"
+"flatpak:com.usebruno.Bruno" = "latest"
+"flatpak:com.visualstudio.code" = "latest"
+
+# online
+"flatpak:com.discordapp.Discord" = "latest"
+"flatpak:com.spotify.Client" = "latest"
+
+# browser
+"flatpak:com.google.Chrome" = "latest"
+"flatpak:org.mozilla.firefox" = "latest"
+"flatpak:io.gitlab.librewolf-community" = "latest"
+
+# downloader
+"flatpak:org.jdownloader.JDownloader" = "latest"
+"flatpak:org.qbittorrent.qBittorrent" = "latest"
+
+# protocol
+# "flatpak:org.filezillaproject.Filezilla" = "latest"
+"flatpak:org.remmina.Remmina" = "latest"

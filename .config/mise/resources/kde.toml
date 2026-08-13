@@ -3,10 +3,11 @@
 "org.kde.konsole.desktop" = { binding = "none", group = "services" }
 
 [kde.theme]
-"kwriteconfig:kdeglobals:General:ColorScheme" = "Dracula"
-"kwriteconfig:kde-gtk-config:GTK:theme" = "Dracula"
-"kwriteconfig:gtk-4.0:Settings:gtk-theme-name" = "Dracula"
-"kwriteconfig:plasmarc:Theme:name" = "Dracula"
-"kwriteconfig:kwinrc:org.kde.kdecoration2:theme" = "Dracula"
-"kwriteconfig:kdeglobals:Icons:Theme" = "Dracula"
-"kwriteconfig:kcminputrc:Mouse:cursorTheme" = "Dracula-cursors"
+"kdeglobals:General:ColorScheme" = "Dracula"
+"kde-gtk-config:GTK:theme" = "Dracula"
+"gtk-4.0:Settings:gtk-theme-name" = "Dracula"
+"plasmarc:Theme:name" = "Dracula"
+"kwinrc:org.kde.kdecoration2:library" = "org.kde.kwin.aurorae"
+"kwinrc:org.kde.kdecoration2:theme" = "__aurorae__svg__Dracula"
+"kdeglobals:Icons:Theme" = "Dracula"
+"kcminputrc:Mouse:cursorTheme" = "Dracula-cursors"

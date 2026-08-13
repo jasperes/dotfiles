@@ -1,0 +1,4 @@
+[apps.curl]
+"mise" = { link = "https://mise.run", shell = "sh" }
+"ohmyzsh" = { link = "https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh", shell = "sh", args = "--unattended" }
+"ohmyposh" = { link = "https://ohmyposh.dev/install.sh", shell = "bash" }

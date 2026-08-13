@@ -2,7 +2,7 @@
 [[ $- != *i* ]] && return
 
 # imports
-source ~/.shrc
+[ -f "$HOME/.shrc" ] && . "$HOME/.shrc"
 # for x in $(ls ~/ -a | grep '.bashrc.'); do source "$x"; done
 
 # don't put duplicate lines or lines starting with space in the history.

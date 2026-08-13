@@ -1,6 +1,9 @@
 [settings]
-dotfiles.root = "~/.dotfiles"
-dotfiles.default_mode = "symlink-each"
+color_theme = "dracula"
+
+[settings.dotfiles]
+root = "~/.dotfiles"
+default_mode = "symlink-each"
 
 [dotfiles]
 "~/" = { source = "~/.dotfiles", mode = "symlink-each", exclude = [".git", ".gitignore", "README.md"] }
@@ -18,3 +21,24 @@ powershell = "latest"
 python = "latest"
 usage = "latest"
 uv = "latest"
+
+[env]
+SYSTEM = "none"
+GPU = "none"
+DESKTOP = "none"
+
+[tasks."distro:setup:system"]
+run = "echo {{ env.SYSTEM }}"
+
+[tasks."distro:setup:gpu"]
+run = "echo {{ env.GPU }}"
+
+[tasks."distro:setup:desktop"]
+run = "echo {{ env.DESKTOP }}"
+
+[tasks."bootstrap"]
+run = [
+    { task = "distro:setup:system" },
+    { task = "distro:setup:gpu" },
+    { task = "distro:setup:desktop" },
+]

@@ -1,3 +1,6 @@
+[env]
+SYSTEM = "cachyos"
+
 [bootstrap.packages]
 # CachyOS
 "pacman:linux-cachyos" = "latest"
@@ -26,6 +29,7 @@
 "pacman:iotop" = "latest"
 "pacman:nethogs" = "latest"
 "pacman:fuse2" = "latest"
+"pacman:flatpak" = "latest"
 "pacman:ntfs-3g" = "latest"
 "pacman:discord" = "latest"
 "pacman:firefox" = "latest"

@@ -1,0 +1,6 @@
+[core.shell]
+bin = "/bin/tmux"
+
+[core.swap]
+file = "/swapfile"
+size = "16384"
