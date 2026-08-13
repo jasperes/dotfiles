@@ -36,16 +36,3 @@ source ~/.dracula.zsh-syntax-highlighting.sh
 # zsh colorized
 export ZSH_COLORIZE_STYLE="dracula"
 export ZSH_COLORIZE_CHROMA_FORMATTER=terminal256
-
-# Desktop Environment
-export KDE_COLOR_SCHEME="Dracula"
-export KDE_PLASMA_STYLE="Dracula"
-export KDE_ICON_THEME="Dracula"
-export KDE_WINDOW_DECO="Dracula"
-export KDE_CURSOR_THEME="Dracula-cursors"
-export QT_STYLE_OVERRIDE="Dracula"
-export GTK_THEME="Dracula"
-export GTK_COLOR_SCHEME="prefer-dark"
-export GLIB_SCHEME_PREFERENCE=1
-export ICON_THEME="Dracula"
-export XCURSOR_THEME="Dracula-cursors"
