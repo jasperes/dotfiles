@@ -1,5 +1,5 @@
 [core.shell]
-bin = "/bin/tmux"
+bin = "/bin/zsh"
 
 [core.swap]
 file = "/swapfile"

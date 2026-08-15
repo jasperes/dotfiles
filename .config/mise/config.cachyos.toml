@@ -36,3 +36,6 @@ SYSTEM = "cachyos"
 "pacman:code" = "latest"
 "pacman:etcher-bin" = "latest"
 "pacman:python-pygments" = "latest"
+
+# flatpak
+"flatpak:com.github.tchx84.Flatseal" = "latest"

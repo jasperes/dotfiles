@@ -4,6 +4,8 @@
 #MISE hide=true
 #MISE tools={ yq="latest" }
 
+set -e
+
 SETTINGS_TOML="${HOME}/.config/mise/resources/kde.toml"
 
 [ ! -f "$SETTINGS_TOML" ] && echo "Erro: Arquivo $SETTINGS_TOML não encontrado." && exit 1

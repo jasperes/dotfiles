@@ -13,6 +13,10 @@ SETTINGS_TOML="${HOME}/.config/mise/resources/apps.toml"
 yq eval '.apps.curl | to_entries[] | [.key, .value.link, .value.shell, (.value.args // "")] | @tsv' "${SETTINGS_TOML}" | while IFS=$'\t' read -r name link shell args; do
     [[ -z "$name" ]] && continue
 
+    # already installed
+    command -v "$name" >/dev/null 2>&1 && exit 0
+
+    # install
     echo "Installing ${name} from ${shell}..."
     curl -fsSL "$link" | $shell -s -- "" $args && echo "...Success!" || echo "...Failure!"
     echo

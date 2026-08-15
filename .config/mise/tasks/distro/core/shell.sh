@@ -16,14 +16,19 @@ SHELLS_FILE=/etc/shells
 
 ZSH_FILE=/bin/zsh
 if [[ -f $ZSH_FILE ]] && [[ -z $(grep $ZSH_FILE $SHELLS_FILE) ]]; then
+    echo "Adding ZSH"
     echo $ZSH_FILE | sudo tee -a $SHELLS_FILE
 fi
 
 TMUX_FILE=/bin/tmux
 if [[ -f $TMUX_FILE ]] && [[ -z $(grep $TMUX_FILE $SHELLS_FILE) ]]; then
+    echo "Adding TMUX"
     echo $TMUX_FILE | sudo tee -a $SHELLS_FILE
 fi
 
-chsh -s $SHELL_BIN $USER
+if [[ "$(getent passwd "$USER" | cut -d: -f7)" != "$SHELL_BIN" ]]; then
+    echo "Setting default shell to $SHELL_BIN"
+    chsh -s $SHELL_BIN $USER
+fi
 
 exit 0

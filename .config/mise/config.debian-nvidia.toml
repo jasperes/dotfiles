@@ -3,10 +3,15 @@ GPU = "nvidia"
 
 [bootstrap.hooks.pre-packages]
 run = [
-    "dpkg --add-architecture i386",
+    """ # DEBIAN - Add i386
+    {% if env.SYSTEM = 'debian' %}
+    dpkg --add-architecture i386
+    {% endif %}
+    """,
 ]
 
 [bootstrap.packages]
+# Debian
 "apt:linux-headers-amd64" = "latest"
 "apt:nvidia-kernel-common" = "latest"
 "apt:build-essential" = "latest"
@@ -15,7 +20,7 @@ run = [
 "apt:libc6:i386" = "latest"
 
 [tasks."distro:setup:gpu"]
-run = """ # DEBIAN
+run = """ # DEBIAN - Install CUDA
     {% if env.SYSTEM = 'debian' %}
     mkdir -p ~/.temp && cd ~/.temp
     wget https://developer.download.nvidia.com/compute/cuda/repos/debian13/x86_64/cuda-keyring_1.1-1_all.deb

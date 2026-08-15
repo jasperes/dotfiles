@@ -1,4 +1,45 @@
 [apps.curl]
 "mise" = { link = "https://mise.run", shell = "sh" }
-"ohmyzsh" = { link = "https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh", shell = "sh", args = "--unattended" }
-"ohmyposh" = { link = "https://ohmyposh.dev/install.sh", shell = "bash" }
+"omz" = { link = "https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh", shell = "sh", args = "--unattended" }
+"oh-my-posh" = { link = "https://ohmyposh.dev/install.sh", shell = "bash" }
+
+[apps.vscode.extensions]
+file = "~/.vscode/extensions.txt"
+
+[apps.powershell]
+modules = [
+  "Terminal-Icons",
+]
+
+[apps.flatpak]
+override = [
+  # Mise-en-Place
+  { option = "filesystem", value = "~/.local/share/mise/shims" },
+
+  # Dracula Theme
+  { option = "filesystem", value = "~/.config/assets" },
+  { option = "filesystem", value = "~/.local/share/themes/Dracula" },
+  { option = "filesystem", value = "~/.local/share/icons/Dracula" },
+  { option = "filesystem", value = "~/.local/share/icons/Dracula-cursors" },
+  { option = "filesystem", value = "~/.local/share/aurorae/themes/Dracula" },
+  { option = "filesystem", value = "~/.local/share/color-schemes/Dracula.colors" },
+  { option = "filesystem", value = "~/.local/share/plasma/desktoptheme/Dracula" },
+  { option = "filesystem", value = "~/.local/share/plasma/look-and-feel/Dracula" },
+  { option = "env", value = 'KDE_COLOR_SCHEME=Dracula' },
+  { option = "env", value = 'KDE_PLASMA_STYLE=Dracula' },
+  { option = "env", value = 'KDE_ICON_THEME=Dracula' },
+  { option = "env", value = 'KDE_WINDOW_DECO=Dracula' },
+  { option = "env", value = 'KDE_CURSOR_THEME=Dracula-cursors' },
+  { option = "env", value = 'QT_STYLE_OVERRIDE=Dracula' },
+  { option = "env", value = 'GTK_THEME=Dracula' },
+  { option = "env", value = 'GTK_COLOR_SCHEME=prefer-dark' },
+  { option = "env", value = "GLIB_SCHEME_PREFERENCE=1" },
+  { option = "env", value = 'ICON_THEME=Dracula' },
+  { option = "env", value = 'XCURSOR_THEME=Dracula-cursors' },
+
+  # Steam
+  { option = "filesystem", value = "xdg-config/MangoHud", app = "com.valvesoftware.Steam" },
+  { option = "env", value = "MANGOHUD=1", app = "com.valvesoftware.Steam" },
+  { option = "env", value = "PROTON_ENABLE_WAYLAND=1", app = "com.valvesoftware.Steam" },
+  { option = "env", value = "PROTON_ENABLE_HDR=1", app = "com.valvesoftware.Steam" },
+]

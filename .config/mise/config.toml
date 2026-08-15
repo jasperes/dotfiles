@@ -1,3 +1,8 @@
+[env]
+SYSTEM = "none"
+GPU = "none"
+DESKTOP = "none"
+
 [settings]
 color_theme = "dracula"
 
@@ -5,15 +10,20 @@ color_theme = "dracula"
 root = "~/.dotfiles"
 default_mode = "symlink-each"
 
+[bootstrap.repos]
+# Programs
+"~/.local/opt/reshade" = { url = "git@github.com:kevinlekiller/reshade-steam-proton.git" }
+
 [dotfiles]
 "~/" = { source = "~/.dotfiles", mode = "symlink-each", exclude = [".git", ".gitignore", "README.md"] }
 # VSCode OSS
 "~/.vscode-oss" = { source = "~/.dotfiles/.vscode", mode = "symlink-each" }
 "~/.config/Code - OSS/User/settings.json" = { source = "~/.dotfiles/.config/Code/User/settings.json", mode = "symlink" }
 
-[bootstrap.repos]
-# Programs
-"~/.local/opt/reshade" = { url = "git@github.com:kevinlekiller/reshade-steam-proton.git" }
+[bootstrap.hooks.post-packages]
+run = [
+    "mise run distro:apps:curl",
+]
 
 [tools]
 go = "latest"
@@ -21,11 +31,7 @@ powershell = "latest"
 python = "latest"
 usage = "latest"
 uv = "latest"
-
-[env]
-SYSTEM = "none"
-GPU = "none"
-DESKTOP = "none"
+yq = "latest"
 
 [tasks."distro:setup:system"]
 run = "echo {{ env.SYSTEM }}"
@@ -41,4 +47,13 @@ run = [
     { task = "distro:setup:system" },
     { task = "distro:setup:gpu" },
     { task = "distro:setup:desktop" },
+]
+
+[bootstrap.hooks.final]
+run = [
+    "mise run distro:core:shell",
+    "mise run distro:core:swapfile",
+    "mise run distro:apps:flatpak:override",
+    "mise run distro:apps:vscode:extensions",
+    "mise run distro:apps:powershell:modules",
 ]

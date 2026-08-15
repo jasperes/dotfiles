@@ -5,7 +5,6 @@
 [kde.theme]
 "kdeglobals:General:ColorScheme" = "Dracula"
 "kde-gtk-config:GTK:theme" = "Dracula"
-"gtk-4.0:Settings:gtk-theme-name" = "Dracula"
 "plasmarc:Theme:name" = "Dracula"
 "kwinrc:org.kde.kdecoration2:library" = "org.kde.kwin.aurorae"
 "kwinrc:org.kde.kdecoration2:theme" = "__aurorae__svg__Dracula"
