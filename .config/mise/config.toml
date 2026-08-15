@@ -26,12 +26,9 @@ run = [
 ]
 
 [tools]
-go = "latest"
 powershell = "latest"
-python = "latest"
 usage = "latest"
 uv = "latest"
-yq = "latest"
 
 [tasks."distro:setup:system"]
 run = "echo {{ env.SYSTEM }}"
