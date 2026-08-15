@@ -12,8 +12,6 @@ SYSTEM = "debian"
 
 # softwares
 "apt:flatpak" = "latest"
-"apt:gnome-shell-extensions" = "latest"
-"apt:gnome-software-plugin-flatpak" = "latest"
 "apt:kitty" = "latest"
 "apt:gparted" = "latest"
 
@@ -21,7 +19,6 @@ SYSTEM = "debian"
 "apt:git" = "latest"
 "apt:tmux" = "latest"
 "apt:zsh" = "latest"
-"apt:rcm" = "latest"
 "apt:tree" = "latest"
 "apt:expect" = "latest"
 "apt:sshpass" = "latest"

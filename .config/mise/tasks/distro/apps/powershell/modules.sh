@@ -13,8 +13,10 @@ SETTINGS_TOML="${HOME}/.config/mise/resources/apps.toml"
 yq eval '.apps.powershell.modules[]' "$SETTINGS_TOML" | while read -r mod_id || [[ -n "$mod_id" ]]; do
     [ -z "$mod_id" ] && continue
 
-    echo "Module: $mod_id"
-    pwsh -Command "Install-Module -Name $mod_id -Repository PSGallery -Force"
+    if ! pwsh -Command "if (-not (Get-Module -ListAvailable -Name '$mod_id')) { exit 1 }" 2>/dev/null; then
+        echo "Module: $mod_id"
+        pwsh -Command "Install-Module -Name $mod_id -Repository PSGallery -Force"
+    fi
 done
 
 exit 0

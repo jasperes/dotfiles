@@ -7,17 +7,59 @@ SYSTEM = "cachyos"
 "pacman:linux-cachyos-headers" = "latest"
 "pacman:linux-cachyos-lts" = "latest"
 "pacman:linux-cachyos-lts-headers" = "latest"
-"pacman:cachyos-gaming-applications" = "latest"
-"pacman:cachyos-gaming-meta" = "latest"
-"pacman:shelly-flatpak-backend" = "latest"
-"pacman:python" = "latest"
-"pacman:perl" = "latest"
-"pacman:neovim" = "latest"
-"pacman:vlc" = "latest"
-"pacman:vlc-plugins-all" = "latest"
+
+# Libs
+"pacman:ntfs-3g" = "latest"
 "pacman:ffmpeg" = "latest"
 "pacman:ffmpegthumbs" = "latest"
 "pacman:ffmpegthumbnailer" = "latest"
+"pacman:python-pygments" = "latest"
+
+# Shelly
+"pacman:shelly-flatpak-backend" = "latest"
+"pacman:fuse2" = "latest"
+"pacman:flatpak" = "latest"
+
+# Gaming
+"pacman:cachyos-gaming-applications" = "latest"
+"pacman:cachyos-gaming-meta" = "latest"
+"pacman:protonplus" = "latest"
+# "pacman:proton-qt" = "latest"
+"pacman:parsec-bin" = "latest"
+
+# Desktop
+"pacman:vlc" = "latest"
+"pacman:vlc-plugins-all" = "latest"
+"pacman:discord" = "latest"
+"pacman:firefox" = "latest"
+
+# IDE
+"pacman:code" = "latest"
+"pacman:dbeaver" = "latest"
+"pacman:etcher-bin" = "latest"
+
+# Office
+"pacman:libreoffice-fresh" = "latest"
+
+# Image Editor
+"pacman:gimp" = "latest"
+# "pacman:krita" = "latest"
+# "pacman:inkscape" = "latest"
+
+# Infra
+"pacman:mission-center" = "latest"
+"pacman:virt-manager" = "latest"
+"pacman:qemu-full" = "latest"
+
+# Downloader
+"pacman:jdownloader2" = "latest"
+"pacman:qbittorrent" = "latest"
+
+# Protocol
+"pacman:remmina" = "latest"
+
+# Terminal
+"pacman:neovim" = "latest"
 "pacman:git" = "latest"
 "pacman:tmux" = "latest"
 "pacman:zsh" = "latest"
@@ -28,14 +70,11 @@ SYSTEM = "cachyos"
 "pacman:nvtop" = "latest"
 "pacman:iotop" = "latest"
 "pacman:nethogs" = "latest"
-"pacman:fuse2" = "latest"
-"pacman:flatpak" = "latest"
-"pacman:ntfs-3g" = "latest"
-"pacman:discord" = "latest"
-"pacman:firefox" = "latest"
-"pacman:code" = "latest"
-"pacman:etcher-bin" = "latest"
-"pacman:python-pygments" = "latest"
 
 # flatpak
 "flatpak:com.github.tchx84.Flatseal" = "latest"
+
+# Games
+"flatpak:com.usebottles.bottles" = "latest"
+"flatpak:net.rpcs3.RPCS3" = "latest"
+"flatpak:net.shadps4.shadPS4" = "latest"

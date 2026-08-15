@@ -1,6 +1,10 @@
 [env]
 DESKTOP = "gnome"
 
+[bootstrap.packages]
+"apt:gnome-shell-extensions" = "latest"
+"apt:gnome-software-plugin-flatpak" = "latest"
+
 [tasks."distro:setup:desktop"]
 run = [
     { task = "distro:desktop:gnome:extensions" },
